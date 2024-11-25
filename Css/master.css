@@ -30,7 +30,7 @@ body{
     border: 1px;
     border-radius: 2px;
 }
-}
+
 .setting-box.open{
     left: 0;
 }
@@ -101,6 +101,18 @@ body{
 .setting-box .option-box .random-background span.active{
     opacity: 1;
 }
+.setting-box .reset-option{
+    cursor: pointer;
+    font-weight: bold;
+    width: 134px;
+    background: #df0000;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    margin-top: 25px;
+}
 /* <!-- end setting box --> */
 
 /* <!-- start landing pag --> */
@@ -114,7 +126,7 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.744);
+    background-color: rgba(0, 0, 0, 0.7);
     left: 0;
     bottom: 0;
     z-index: 1;
@@ -125,12 +137,14 @@ body{
     position: relative;
     display: flex;
     padding: 10px;
+    margin-right: -140px;
 }
 .header-arae .logo{    
     font-weight: bold;
     padding: 20px;
     width: 300px;
     font-size: 25px;
+    margin-left: -100px;
 }
 .header-arae .links{    
     font-size: 20px;
@@ -177,10 +191,9 @@ body{
 /* <!-- end landing pag --> */
 
 /* start about us */
-.container{
-    width: 1170px;
-    padding-left: 15px;
-    padding-right: 15px;
+.container {
+    width: 90%; /* Use a percentage for better responsiveness */
+    max-width: 1170px; /* Limit max width */
     margin: auto;
 }
 .about-US{
@@ -280,4 +293,474 @@ body{
     margin: 3px;
     cursor: pointer;
 }
+.gallery .images-box .pluegr{
+    width: 300px;
+    padding: 3px;
+    border: solid 5px #CCC;
+    margin: 3px;
+    cursor: pointer;
+}
+.pupo-box{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    position: fixed;
+}
+.popuimgbox{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    border: 1px #ccc solid;
+    border-radius: 6px;
+    z-index: 1001;
+    padding: 10px;
+}
+.popuimgbox img{
+    width: 100%;
+    height: 100%;
+}
+.popuimgbox .closbuttom{
+    position: fixed;
+    top: -20px;
+    right: -15px;
+    background-color: var(--main-color);
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
 /* end gallery */
+/* start timeline */
+.timeline{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+}
+.timeline .timeline-containt{
+    position: relative;
+    overflow: hidden;
+}
+.timeline .timeline-containt:before{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: var(--main-color);
+    border: 1px solid --main-color;
+    border-radius: 2px;
+}
+.timeline .timeline-containt .year{
+    width: 50PX;
+    font-weight: bold;
+    position: relative;
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 5PX;
+    border-radius: 10px;
+    margin: 20px auto;
+    color: #fff;
+}
+.timeline .timeline-containt .left,
+.timeline .timeline-containt .right {
+    position: relative;
+    width: calc(50% - 30px);
+    margin-bottom: 40px;
+}
+
+.timeline .timeline-containt .left {
+    float: left;
+    margin-left: -574px;
+    transition: margin-left 1s ease-in-out;
+}
+
+.timeline .timeline-containt .right {
+    float: right;
+    margin-right: -574px;
+    transition: margin-right 1s ease-in-out;
+}
+.timeline .timeline-containt .containt{
+    padding: 24px;
+    background-color: #FFF;
+    border: 6px;
+    border-radius: 10px;
+}
+.timeline .timeline-containt .containt h3{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+}
+.timeline .timeline-containt .containt p{
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+.timeline .timeline-containt .left:before{
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-color: #FFF;
+    border: 4px solid var(--main-color);
+    position: absolute;
+    border-radius: 50%;
+    right: -40px;
+}
+.timeline .timeline-containt .right:before{
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-color: #FFF;
+    border: 4px solid var(--main-color);
+    position: absolute;
+    border-radius: 50%;
+    left: -40px;
+}
+.timeline .timeline-containt .left .containt:before{
+    content: '';
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent transparent var(--main-color);
+    right: -22px;
+    top: 1px;
+}
+.timeline .timeline-containt .right .containt:before{
+    content: '';
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent var(--main-color) transparent transparent;
+    left: -22px;
+    top: 1px;
+}
+.clearfix{
+    clear: both;
+}
+/* end timeline */
+/* start features */
+.features{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.features h2{
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--main-color);
+    margin: 0 0 50px;
+    text-align: center;
+}
+.features .feat-box{
+    width: 300px;
+    padding: 20px;
+    margin-left: 30px;
+}
+.features .feat-box img{
+    width: 200px;
+    height: 150px;
+}
+.features .featuresflex{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+.features .feat-box h4{
+    font-size: 23px;
+    font-weight: bold;
+}
+.features .feat-box p{
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+.features .feat-box h4:before{
+    content: '';
+    border: solid 2px var(--main-color);
+}
+/* end features */
+/* start commints */
+.testi{
+    min-height: 400px;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.testi h2{
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--main-color);
+    margin: 0 0 50px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    margin-left: -15px;
+}
+.testi h2 span{
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    margin: 0 0 50px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+.testi:before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.testi:after{
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color:var(--main-color);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.testi .containt-commint{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+.testi .containt-commint .testi-box{
+    color: #666;
+    width: 100%; /* Full width for mobile */
+    max-width: 570px; /* Limit max width */
+    height: auto; /* Allow height to adjust */
+    background-color: #FFF;
+    padding: 20px; /* Reduced padding for mobile */
+    margin: 15px; /* Margin around each box */
+    border-radius: 8px;
+    display: flex;
+}
+.testi .containt-commint .commint-img img{
+    width: 80px;
+    border-radius: 50%;
+}
+.testi .containt-commint .commit-box{
+    padding: 10px;
+    margin-left: 15px;
+    
+}
+.testi .containt-commint .commit-box h4{
+    font-size: 18px;
+    font-weight: bold;
+}
+.testi .containt-commint .commit-box p{
+    color: #707070;
+    font-style: italic;
+    line-height: 1.5;
+    font-size: 14px;
+}
+/* end commints */
+/* strat nav-bullet */
+.nav-bullet{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 900;
+}
+.nav-bullet .bullet{
+    width: 13px;
+    height: 13px;
+    border: 4px solid var(--main-color);
+    margin: 10px auto;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    background-color: #FFF;
+}
+.nav-bullet .bullet:hover .tooltipe{
+    display: block;
+}
+.nav-bullet .bullet .tooltipe{
+    width: 70px;
+    top: -3px;
+    right: 30px;
+    position: absolute;
+    padding: 4px 10px;
+    color: #FFF;
+    background-color: var(--main-color);
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: default;
+    text-align: center;
+    pointer-events: none;
+    display: none;
+}
+.nav-bullet .bullet .tooltipe:before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-color: transparent transparent transparent var(--main-color);
+    position: absolute;
+    right: -16px;
+    top: 3px;
+    border-style: solid;
+    border-width: 8px;
+}
+.nav-bullet .bullet a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+/* end nav-bullet */
+@media (max-width: 768px) {
+    .header-arae {
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: center; /* Center items */
+    }
+    .testi h2 {
+        font-size: 30px; /* Smaller heading size for mobile */
+        margin-bottom: 30px; /* Adjust margin */
+        margin-left: 13px;
+    }
+    .testi .containt-commint {
+        flex-direction: column; /* Stack testimonial boxes vertically */
+        align-items: center; /* Center align items */
+        margin-left: 0; /* Reset left margin */
+        padding-left: 20px; /* Add some left padding if needed */
+        padding-right: 20px; /* Add some right padding if needed */
+    }
+
+    .testi .containt-commint .testi-box {
+        width: calc(100% - 40px); /* Full width minus margins for responsiveness */
+        margin-left: auto; /* Center align boxes in column layout */
+        margin-right: auto; /* Center align boxes in column layout */
+        margin-bottom: 20px; /* Space between testimonial boxes */
+        padding-top: 20px; /* Adjust padding as needed */
+        padding-bottom: 20px; /* Adjust padding as needed */
+        height:auto; /* Allow height to adjust based on content */
+    }
+    .header-arae .logo {
+        margin-bottom: 20px; /* Space between logo and links */
+    }
+
+    .header-arae .links {
+        font-size: 16px; /* Smaller font size for links */
+        padding-right: 0; /* Remove right padding */
+        text-align: center; /* Center links */
+    }
+
+    .skills .skills-box {
+        flex-direction: column; /* Stack skill boxes vertically */
+        margin-bottom: 20px; /* Space between skill boxes */
+    }
+
+    .skills .skills-name {
+        text-align: left; /* Align text to the left */
+    }
+
+    .gallery .images-box img {
+        width: 32%;
+        max-width: 41%;
+        height: auto;
+    }
+    .timeline .timeline-containt .containt p {
+        color: #666;
+        margin: 0;
+        line-height: 1;
+        font-size: 12px;
+    }
+    .featuresflex {
+        flex-direction: column; /* Stack features vertically */
+    }
+
+    .feat-box {
+        width: 100%; /* Full width for each feature box */
+        margin-bottom: 20px; /* Space between feature boxes */
+    }
+
+    .testi-box {
+        display: flex;
+        flex-direction: column; /* Stack testimonial elements vertically */
+        align-items: center; /* Center testimonial content */
+    }
+
+    .commint-img img {
+        width: 80%; /* Make testimonial images responsive */
+        height: auto;
+    }
+    .nav-bullet{
+        display: none;
+    }
+    .about-US .info-box p {
+        line-height: 1;
+        font-size: 12px;
+    }
+    .about-US .imag-box .img {
+        width: 218px;
+    }
+    .setting-box {
+        width: 30%; /* Full width for settings box on mobile */
+        left: -29%; /* Hide off-screen initially */
+        margin-top: 309px;
+    }
+    .setting-box .option-box h4{
+        font-size: 22px;
+    }
+    .setting-box .option-box .yes, .setting-box .option-box .no{
+        padding: 5px 9px;
+    }
+}
+/* Adjustments for very small screens (e.g., phones) */
+@media (max-width: 480px) {
+    .introduction-text h1 {
+        font-size: 28px; /* Smaller heading size for mobile */
+    }
+    .setting-box .option-box .yes, .setting-box .option-box .no{
+        padding: 5px 9px;
+    }
+    .introduction-text p {
+        font-size: 16px; /* Smaller paragraph size for mobile */
+    }
+    .setting-box .option-box h4{
+        font-size: 22px;
+    }
+    .about-US .info-box p {
+        line-height: 1;
+        font-size: 12px;
+    }
+    .setting-box {
+        width: 30%; /* Full width for settings box on mobile */
+        left: -29%; /* Hide off-screen initially */
+        margin-top: 309px;
+    }
+    .timeline .timeline-containt .containt p {
+        color: #666;
+        margin: 0;
+        line-height: 1;
+        font-size: 12px;
+    }
+    .setting-box.open {
+        left: 0; /* Show settings box when open */
+    }
+    .about-US .imag-box .img {
+        width: 218px;
+    }
+    .nav-bullet{
+        display: none;
+    }
+}

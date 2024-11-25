@@ -143,3 +143,73 @@ function updateSkills() {
 window.onscroll = updateSkills;
 
 updateSkills();
+
+
+let ourgallery = document.querySelectorAll(".gallery img");
+
+ourgallery.forEach(img => {
+    img.addEventListener('click', (e) => {
+        let overlay = document.createElement("div");
+        overlay.className = 'pupo-box';
+        document.body.appendChild(overlay);
+        let popuimgbox = document.createElement("div");
+        popuimgbox.className = 'popuimgbox';
+        let popuimg = document.createElement("img");
+        popuimg.src = img.src;
+        popuimgbox.appendChild(popuimg);
+        document.body.appendChild(popuimgbox);
+        let closbuttom = document.createElement("span");
+        let closbuttomtext = document.createTextNode("X");
+        closbuttom.appendChild(closbuttomtext);
+        popuimgbox.appendChild(closbuttom);
+        closbuttom.className = 'closbuttom';
+    })
+});
+
+document.addEventListener('click', (e) =>{
+    if(e.target.className == 'closbuttom')
+    {
+        document.querySelector(".pupo-box").remove();
+        document.querySelector(".popuimgbox").remove();
+    }
+})
+
+let leftElements = document.querySelectorAll(".timeline .left");
+let rightElements = document.querySelectorAll(".timeline .right");
+
+function isElementInViewport(el) {
+    let rect = el.getBoundingClientRect(); // Get the element's position relative to the viewport
+    return (
+        rect.top <= window.innerHeight && // Top edge is visible
+        rect.bottom >= 0 // Bottom edge is visible
+    );
+}
+
+function updateTimeline() {
+    // Handle `.left` elements
+    leftElements.forEach(element => {
+        if (isElementInViewport(element)) {
+            element.style.marginLeft = "0px"; // Slide left into view
+        }
+    });
+
+    // Handle `.right` elements
+    rightElements.forEach(element => {
+        if (isElementInViewport(element)) {
+            element.style.marginRight = "0px"; // Slide right into view
+        }
+    });
+}
+
+// Attach the function to the scroll event
+window.addEventListener("scroll", updateTimeline);
+
+// Call the function once to check on page load
+updateTimeline();
+
+
+
+document.querySelector(".reset-option").onclick = function(){
+    localStorage.clear();
+    window.location.reload();
+}
