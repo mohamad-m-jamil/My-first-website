@@ -656,7 +656,7 @@ body{
     }
     .header-arae .links {
         font-size: 16px; /* Smaller font size for links */
-        padding-right: 158px; /* Remove right padding */
+        padding-right: 182px; /* Remove right padding */
         text-align: center; /* Center links */
     }
 
@@ -730,6 +730,15 @@ body{
         margin-left: 30px;
         padding-top: 33px;
     }
+    .introduction-text {
+        color: white;
+        z-index: 2;
+        position: absolute;
+        left: 47%;
+        top: 64%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 /* Adjustments for very small screens (e.g., phones) */
 @media (max-width: 480px) {
@@ -779,5 +788,19 @@ body{
         font-size: 14px;
         color: var(--main-color);
         margin: 0 0 10px;
+    }
+    .introduction-text {
+        color: white;
+        z-index: 2;
+        position: absolute;
+        left: 47%;
+        top: 64%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .header-arae .links {
+        font-size: 16px;
+        padding-right: 182px;
+        text-align: center;
     }
 }
