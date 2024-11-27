@@ -654,13 +654,9 @@ body{
         padding-bottom: 20px; /* Adjust padding as needed */
         height:auto; /* Allow height to adjust based on content */
     }
-    .header-arae .logo {
-        margin-bottom: 20px; /* Space between logo and links */
-    }
-
     .header-arae .links {
         font-size: 16px; /* Smaller font size for links */
-        padding-right: 0; /* Remove right padding */
+        padding-right: 158px; /* Remove right padding */
         text-align: center; /* Center links */
     }
 
@@ -672,7 +668,12 @@ body{
     .skills .skills-name {
         text-align: left; /* Align text to the left */
     }
-
+    .timeline .timeline-containt .containt h3 {
+        font-weight: bold;
+        font-size: 14px;
+        color: var(--main-color);
+        margin: 0 0 10px;
+    }
     .gallery .images-box img {
         width: 32%;
         max-width: 41%;
@@ -713,22 +714,32 @@ body{
     .about-US .imag-box .img {
         width: 218px;
     }
-    .setting-box {
-        width: 30%; /* Full width for settings box on mobile */
-        left: -29%; /* Hide off-screen initially */
-        margin-top: 309px;
-    }
     .setting-box .option-box h4{
         font-size: 22px;
     }
     .setting-box .option-box .yes, .setting-box .option-box .no{
         padding: 5px 9px;
     }
+    .header-arae .logo {
+        margin-bottom: 20px;
+        padding-left: 77px;
+        color: var(--main-color);
+    }
+    .header-arae .links li {
+        display: inline-block;
+        margin-left: 30px;
+        padding-top: 33px;
+    }
 }
 /* Adjustments for very small screens (e.g., phones) */
 @media (max-width: 480px) {
     .introduction-text h1 {
         font-size: 28px; /* Smaller heading size for mobile */
+    }
+    .header-arae .logo {
+        margin-bottom: 20px;
+        padding-left: 77px;
+        color: var(--main-color);
     }
     .setting-box .option-box .yes, .setting-box .option-box .no{
         padding: 5px 9px;
@@ -742,11 +753,6 @@ body{
     .about-US .info-box p {
         line-height: 1;
         font-size: 12px;
-    }
-    .setting-box {
-        width: 30%; /* Full width for settings box on mobile */
-        left: -29%; /* Hide off-screen initially */
-        margin-top: 309px;
     }
     .timeline .timeline-containt .containt p {
         color: #666;
@@ -762,5 +768,16 @@ body{
     }
     .nav-bullet{
         display: none;
+    }
+    .header-arae .links li {
+        display: inline-block;
+        margin-left: 30px;
+        padding-top: 33px;
+    }
+    .timeline .timeline-containt .containt h3 {
+        font-weight: bold;
+        font-size: 14px;
+        color: var(--main-color);
+        margin: 0 0 10px;
     }
 }
