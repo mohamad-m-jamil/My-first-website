@@ -4,6 +4,7 @@
 
 body{
     font-family: "Open Sans", serif;
+    overflow-x: hidden;
 }
 
 /* <!-- start setting box --> */
