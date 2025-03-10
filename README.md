@@ -15,3 +15,6 @@ Welcome to my personal portfolio website! This project showcases my skills, cert
 - **HTML5**: Structure of the website.
 - **CSS3**: Styling and responsiveness.
 - **JavaScript**: Interactive elements and animations.
+
+
+## Open (https://mohamad-m-jamil.github.io/my_first_react_app_lekhacount/) to view it in your browser.
