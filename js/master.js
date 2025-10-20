@@ -111,25 +111,19 @@ document.addEventListener("DOMContentLoaded", function() {
 let ourskills = document.querySelector(".skills");
 
 function updateSkills() {
-    if (!ourskills) return;
-    
     let skillsofsettop = ourskills.offsetTop;
     let windowheight = window.innerHeight;
     let windowcroll = window.scrollY;
 
-    if (windowcroll + windowheight >= skillsofsettop + 100) {
+    if (windowcroll + windowheight >= skillsofsettop) {
         let allskills = document.querySelectorAll(".skills .skills-box span");
         allskills.forEach(element => {
-            if (element.dataset.progress) {
-                element.style.width = element.dataset.progress;
-            }
+            element.style.width = element.dataset.progress;
         });
     }
 }
 
 window.onscroll = updateSkills;
-window.addEventListener('load', updateSkills);
-window.addEventListener('resize', updateSkills);
 updateSkills();
 
 let ourgallery = document.querySelectorAll(".gallery img");
